@@ -1,0 +1,506 @@
+<?php 
+  ob_start();
+  $con=mysqli_connect("localhost","root","","Port"); 
+  
+  if(!empty($_POST['sub']))
+  {
+  
+      $user=strip_tags(ucfirst(strtolower($_POST['name'])));
+      $mail=strip_tags(strtolower($_POST['email']));
+      $message=strip_tags(ucfirst(strtolower($_POST['comment'])));    
+  
+      $sql = "INSERT INTO `hire`(`Name`, `email`, `message`) VALUES ('$user','$mail','$message')";
+      $result = mysqli_query($con,$sql);
+  }
+  ?>
+  
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with chetan landing page.">
+    <meta name="author" content="chetan Rawat">
+    <title>chetan Portfolio</title>
+    <link rel="icon" type="image/png" href="chetansingh.png">
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + chetan main styles -->
+    <link rel="stylesheet" href="assets/css/chetan.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- Page Navbar -->
+    <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="logo" href="#">chetan Rawat</a>
+            <ul class="nav">
+                <li class="item">
+                    <a class="link" href="#home">Home</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#about">About</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="#portfolio">Portfolio</a>
+                </li>
+     
+                <li class="item">
+                    <a class="link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </a>
+        </div>
+    </nav><!-- End of Page Navbar -->
+
+    <!-- page header -->
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">HI!</span>
+                <span class="down">I am Chetan Rawat</span>
+            </h1>
+            <p class="header-subtitle">Full Stack Web Developer</p>
+
+            <button class="btn btn-primary" >Visit My Works</button>
+        </div>
+    </header><!-- end of page header -->
+
+    <!-- about section -->
+    <section class="section pt-0" id="about">
+        <!-- container -->
+        <div class="container text-center">
+            <!-- about wrapper -->
+            <div class="about">
+                <div class="about-img-holder">
+                    <img src="assets/imgs/chetan.png" class="about-img rounded thumbnail"
+                        alt="chetan Rawat portfolio" style="width: 100%;height: 600px;border-radius: 100px;">
+                </div>
+                <div class="about-caption">
+                    <p class="section-subtitle">Who Am I ?</p>
+                    <h2 class="section-title mb-3">About Me</h2>
+                    <p>
+                        Hello! Chetan Rawat here. For 1 years, I've poured my heart into web development. I build digital tools that propel companies to new heights.
+                       <br> <br>A love for tech's power to bring ideas to life kicked off my web dev adventure. I've sharpened my Php, Ajax, Jason, API'S, Bootstrap ,JavaScript, JQuery chops over time. Now I craft tough expandable web experiences that hit the mark for all sorts of clients.
+                        <br><br>When I'm not coding, you'll catch me diving into fresh tech fads playing around with design ideas, or pitching in on open-source stuff. This field's always changing so I'm all about soaking up new knowledge and rolling with the latest tech to stay on top of my game.
+                        <br><br>We shall have a conversation and integrate the idea in your mind to internet-based products which will be created by us. You could look through some of my works as you can find them on my portfolio and if there are any queries, chances of working together are high.
+
+                    </p>
+                    <button class="btn-rounded btn btn-outline-primary mt-4">Download CV</button>
+                </div>
+            </div><!-- end of about wrapper -->
+        </div><!-- end of container -->
+    </section> <!-- end of about section -->
+
+    <!-- service section -->
+    <section class="section" id="service">
+        <div class="container text-center">
+            <p class="section-subtitle">Expertence In Technologies</p>
+            <h6 class="section-title mb-6">SKILLS</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/back.png"
+                                alt="chetan Rawat portfolio"
+                                class="icon">
+                            <h6 class="title">Backend Technologies</h6>
+                            <p class="subtitle">Php: PHP backend solutions for dynamic web applications<br>
+                            Ajax: Back end AJAX efficiently and add interactivity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/fronted.webp"
+                                alt="chetan Rawat portfolio"
+                                class="icon">
+                            <h6 class="title">Fronted FrameWorks</h6>
+                            <p class="subtitle">Bootstrap: Responsive framework <br>HTML/CSS: Building blocks JS/jQuery: Interactive and dynamic scripting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/ui-ux.png"
+                                alt="chetan Rawat portfolio"
+                                class="icon" style="height: 50px;">
+                            <h6 class="title">UI/UX</h6>
+                            <p class="subtitle">UI/UX: Designing intuitive digital experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="body">
+                            <img src="assets/imgs/jv.png"
+                                alt="chetan Rawat portfolio"
+                                class="icon" style="height: 50px;">
+                            <h6 class="title">Core Java</h6>
+                            <p class="subtitle">Core Java creating robust applications.</p>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- end of row -->
+        </div>
+    </section><!-- end of service section -->
+
+    <!-- portfolio section -->
+    <section class="section" id="portfolio">
+        <div class="container text-center">
+            <p class="section-subtitle">What I Did ?</p>
+            <h6 class="section-title mb-6">Portfolio</h6>
+            <!-- row -->
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img src="assets/imgs/aja.webp" class="portfolio-card-img"
+                            alt="chetan Rawat portfolio">
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Backend Technologies</h5>
+                                    <p class="font-weight-normal">Category: Web Development</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/imgs/nnn.png" class="img-responsive rounded"
+                            alt="chetan Rawat portfolio" style="width: 100%;height: 322px;" >
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Web Fronted Technologies</h5>
+                                    <p class="font-weight-normal">Category: Web Development</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="portfolio-card">
+                        <img class="portfolio-card-img" src="assets/imgs/java.jpg" class="img-responsive rounded"
+                            alt="chetan Rawat portfolio" style="width: 100%;height: 320px;" >
+                        <span class="portfolio-card-overlay">
+                            <span class="portfolio-card-caption">
+                                <h4>Core Java Technologies</h5>
+                                    <p class="font-weight-normal">Category: Java</p>
+                            </span>
+                        </span>
+                    </a>
+                </div>
+            </div><!-- end of row -->
+        </div><!-- end of container -->
+    </section> <!-- end of portfolio section -->
+
+    <!-- pricing section -->
+    <section class="section" id="pricing">
+        <div class="container text-center">
+            <p class="section-subtitle">Certification</p>
+            <h6 class="section-title mb-6">Internship and Achievements</h6>
+            <!-- row -->
+            <div class="pricing-wrapper">
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/web-development.jpg"
+                            alt="chetan Rawat portfolio" style="width: 300px;height: 300px;">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Web Development Course</h6>
+                        <div class="pricing-card-list">
+                            <br>
+                            <h5>Backend Technologies</h5>
+                            <p>Backend With Php</p>
+                            <p>MariaDB Database</p>
+                            <p>Ajax JASON API</p>
+                            <p>Payment GateWays</p>
+                            <br>
+                            <h5>Fronted Technologies</h5>
+                            <p>Fronted With jquery</p>
+                            <p>Scalability With JavaScript</p>
+                            <p>Responsive Bootstrap FrameWork</p>
+                            <p>Beauty With HTML CSS</p>
+                        </div>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/Internship-web-development-php.jpg"
+                            alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">Web Development Internship</h6>
+                        <div class="pricing-card-list">
+                            <br>
+                            <h5>Backend Technologies</h5>
+                            <p>Backend With Php</p>
+                            <p>MariaDB Database</p>
+                            <p>Ajax JASON API</p>
+                            <p>Payment GateWays</p>
+                            <br>
+                            <h5>Fronted Technologies</h5>
+                            <p>Fronted With jquery</p>
+                            <p>Scalability With JavaScript</p>
+                            <p>Responsive Bootstrap FrameWork</p>
+                            <p>Beauty With HTML CSS</p>
+                        </div>
+                    </div>
+                  
+                    <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-card-header">
+                        <img class="pricing-card-icon" src="assets/imgs/UI_UX Design Training - internship.jpg"
+                            alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+                    </div>
+                    <div class="pricing-card-body">
+                        <h6 class="pricing-card-title">UI_UX Design Training</h6>
+                        <div class="pricing-card-list"><br>
+                            <h5>Tools Used</h5>
+                            <p>Figma</p>
+                            <p>3D sturcture</p>
+                            <p>InVision</p>
+                            <p>Marvel</p>
+                            <p>BootStrap</p>
+                            <p>Material Design</p>
+                            <h5>Proficiency</h5>
+                            <p>Interaction Design</p>
+                            <p>Information Architecture</p>
+                            <p>User Research</p>
+
+                        </div>
+                    </div>
+                   
+                    <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+                </div>                
+            </div><!-- end of pricing wrapper -->
+            
+        </div> <!-- end of container -->
+
+
+<!-- second row achievements -->
+
+    <div class="container text-center">
+    
+        <!-- row -->
+        <div class="pricing-wrapper">
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <img class="pricing-card-icon" src="assets/imgs/NEXTGEN AI (1).jpeg"
+                        alt="chetan Rawat portfolio" style="width: 300px;height: 300px;">
+                </div>
+                <div class="pricing-card-body">
+                    <h6 class="pricing-card-title">NEXTGEN AI</h6>
+                    <div class="pricing-card-list">
+                        <br>
+                        <h5>NEXTGEN AI</h5>
+                        <p>WorkShop Ai</p>
+                        <p>Introduction Ai</p>
+                        <p>Importance AI</p>
+                        <p>Security Ai</p>
+               
+                    </div>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <img class="pricing-card-icon" src="assets/imgs/Python Intermediate.png"
+                        alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+                </div>
+                <div class="pricing-card-body">
+                    <h6 class="pricing-card-title">Python-Intermediate</h6>
+                    <div class="pricing-card-list">
+                        <br>
+                        <h5>Python Intermediate</h5>
+                        <p>Syntax</p>
+                        <p>sturctures</p>
+                        <p>Logical Cases</p>
+                        <p>Creative Solving</p>
+                        
+                    </div>
+                </div>
+              
+                <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card-header">
+                    <img class="pricing-card-icon" src="assets/imgs/python_basic certificate (1).jpg"
+                        alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+                </div>
+                <div class="pricing-card-body">
+                    <h6 class="pricing-card-title">Python-Basic</h6>
+                    <div class="pricing-card-list"><br>
+                        <h5>Pyhon Basic</h5>
+                        <p>Loops</p>
+                        <p>Arrays</p>
+                        <p>OOPS</p>
+                        <p>ML</p>
+                        <p>Logical Problems</p>
+                  
+
+                    </div>
+                </div>
+               
+                <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+            </div>                
+        </div><!-- end of pricing wrapper -->
+        
+    </div> <!-- end of container -->
+
+<!-- third row achievements -->
+<div class="container text-center">
+    
+    <!-- row -->
+    <div class="pricing-wrapper">
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <img class="pricing-card-icon" src="assets/imgs/OOPS with C++ (1).jpeg"
+                    alt="chetan Rawat portfolio" style="width: 300px;height: 300px;">
+            </div>
+            <div class="pricing-card-body">
+                <h6 class="pricing-card-title">OOPS with C++</h6>
+                <div class="pricing-card-list">
+                    <br>
+                    <h5>OOPS C++</h5>
+                    <p>Basics</p>
+                    <p>Introduction</p>
+                    <p>Structures</p>
+                    <p>All Topics Under</p>
+                    <p>Logical Solving</p>
+           
+                </div>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <img class="pricing-card-icon" src="assets/imgs/Devtown(startup) (1).jpg"
+                    alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+            </div>
+            <div class="pricing-card-body">
+                <h6 class="pricing-card-title">Devtown(startup)</h6>
+                <div class="pricing-card-list">
+                    <br>
+                    <h5>Devtown (startup) India</h5>
+                    <p>Community Connect</p>
+                    <p>Supporting Skills</p>
+                    <p>Human Interaction Skills</p>
+                    <p>Verified Participant</p>
+                    
+                </div>
+            </div>
+          
+            <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+        </div>
+        <div class="pricing-card">
+            <div class="pricing-card-header">
+                <img class="pricing-card-icon" src="assets/imgs/nsdc.png"
+                    alt="chetan Rawat portfolio"  style="width: 300px;height: 300px;">
+            </div>
+            <div class="pricing-card-body">
+                <h6 class="pricing-card-title">NSDC Skill India</h6>
+                <div class="pricing-card-list"><br>
+                    <h5>NSDC</h5>
+                    <p>Recognition</p>
+                    <p>Industry Alignment</p>
+                    <p>Skill Development</p>
+                    <p>Employability</p>
+                    <p>Sector-Specific</p>
+              
+
+                </div>
+            </div>
+           
+            <a href="https://drive.google.com/drive/folders/1JzEgmoLCMongHTTCGv8Mtt-mdAWIY4sz?usp=sharing" class="btn btn-primary mt-3 pricing-card-btn">GO TO DRIVE</a>
+        </div>                
+    </div><!-- end of pricing wrapper -->
+    
+</div> <!-- end of section-->
+</section>
+
+
+    <!-- section -->
+    <section class="section-sm bg-primary">
+        <!-- container -->
+        <div class="container text-center text-sm-left">
+            <!-- row -->
+            <div class="row align-items-center">
+                <div class="col-sm offset-md-1 mb-4 mb-md-0">
+                    <h6 class="title text-light">Want to work with me?</h6>
+                    <p class="m-0 text-light">Always feel Free to Contact & Hire me</p>
+                </div>
+                <div class="col-sm offset-sm-2 offset-md-3">
+                    <a href="https://www.linkedin.com/in/chetan-rawat-php-developer/"><button class="btn btn-lg my-font btn-light rounded">Hire Me</button></a>
+                </div>
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </section> <!-- end of section -->
+
+
+    <!-- contact section -->
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form action="" method="POST" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <div class="form-group col-sm-6">
+                        <input type="text" size="50" class="form-control" placeholder="Your Name" name="name" required>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <input type="email" class="form-control" placeholder="Enter Email" name="email" requried>
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <textarea name="comment" id="comment" rows="6" class="form-control"
+                            placeholder="Write Something"></textarea>
+                    </div>
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message"  name="sub" class="btn btn-outline-primary rounded">
+                    </div>
+                </div>
+            </form><!-- end of contact form -->
+        </div><!-- end of container -->
+    </section><!-- end of contact section -->
+
+    <!-- footer -->
+    <div class="container">
+        <footer class="footer">
+            <p class="mb-0">Copyright
+                <script>document.write(new Date().getFullYear())</script> &copy; <a
+                    href="index.html">Chetan</a> Rawat <a
+                    href="index.html">Portfolio</a>
+            </p>
+            <div class="social-links text-right m-auto ml-sm-auto">
+                <a href="https://x.com/Chetanrawat15R" class="link"><i class="ti-twitter-alt"></i></a>
+                <a href="https://www.instagram.com/chetan.rawat.07/" class="link"><i class="ti-instagram"></i></a>
+              
+            </div>
+        </footer>
+    </div> <!-- end of page footer -->
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- chetan js -->
+    <script src="assets/js/chetan.js"></script>
+
+</body>
+
+</html>
